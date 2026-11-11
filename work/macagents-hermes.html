@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MacAgents Hermes — Wallace Phillip Maclayne</title>
+  <meta name="description" content="Case de MacAgents Hermes: agente pessoal de IA local-first com ferramentas, memória, rotinas e uma suíte de 20 tarefas para medir o comportamento.">
+  <meta name="theme-color" content="#f2ede3">
+  <meta property="og:title" content="MacAgents Hermes — Case">
+  <meta property="og:description" content="Um agente pessoal de IA que executa, lembra e é avaliado com evidência.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Wallace Phillip, início">
+        Wallace Phillip <span>WPM / 2026</span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false">Menu</button>
+      <nav class="nav" id="primary-nav" data-nav aria-label="Navegação principal">
+        <a href="../index.html#work" aria-current="page">Projetos</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../index.html#method">Método</a>
+        <a class="nav-contact" href="../contact.html">Contato ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="case-header">
+        <div class="container">
+          <div class="breadcrumb mono">
+            <a href="../index.html#work">← Todos os projetos</a>
+            <span>/</span>
+            <span>Case 01</span>
+          </div>
+          <p class="mono eyebrow">AI systems / local-first / 2026</p>
+          <h1>MacAgents Hermes</h1>
+          <div class="case-deck">
+            <p>Um agente pessoal de IA que executa tarefas reais, mantém memória e é avaliado com evidência.</p>
+            <dl class="case-meta">
+              <div>
+                <dt>Papel</dt>
+                <dd>Produto, operação e AI systems</dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>Agente local + automação</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>Hermes Agent, DeepSeek V4.1 Flash, Python, SQLite, Linux</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Ativo</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="case-art" data-index="01" data-label="SYSTEM / AGENT / EVIDENCE" role="img" aria-label="Composição tipográfica abstrata do projeto MacAgents Hermes"></div>
+      </div>
+
+      <div class="container case-body">
+        <div class="case-content">
+          <section class="case-section">
+            <h2>O problema</h2>
+            <p>Um agente de IA parece simples quando é só um chat. O problema começa quando ele precisa executar comandos no sistema, ler e escrever arquivos, navegar em sites, enviar e-mail e rodar tarefas agendadas sem destruir nada no caminho.</p>
+            <p>A maioria dos projetos para na demonstração. Eu queria um agente que funcionasse no uso diário, com limites claros, possibilidade de reverter e uma forma objetiva de saber se ele estava melhorando ou apenas parecendo melhor.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>A solução</h2>
+            <p>Implementei e opero um agente pessoal local-first sobre o <strong>Hermes Agent</strong>, framework open source da Nous Research. Eu não escrevi o núcleo do Hermes: eu implantei, integrei, configurei, medi, corrigi e opero o sistema.</p>
+            <p>O agente roda em Linux, com DeepSeek V4.1 Flash como modelo principal, estado em SQLite, ferramentas de terminal, arquivos, navegador, e-mail e busca, além de memória, skills e rotinas agendadas. Telegram, app desktop e webapp são interfaces para o mesmo backend.</p>
+            <p>A camada que mais importa não é a interface. É a engenharia de operação em volta: suíte de 20 tarefas, verificadores independentes, snapshot de telemetria, backup com restauração testada, redução de superfície e um processo de mudança com revisão separada.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>O processo</h2>
+            <p><strong>Diagnóstico.</strong> Instrumentei o sistema e medi 10.404 chamadas de ferramenta. Encontrei 388 falhas (3,73%), 22 compactações, memória perto do limite e 59% das skills instaladas sem uso. O problema não era “o modelo é fraco”: era seleção de contexto, ferramentas demais e falta de avaliação.</p>
+            <p><strong>Linha de base.</strong> Criei 20 tarefas em quatro categorias: terminal, arquivos, navegador e e-mail. Cada tarefa roda em sessão nova, com fixture isolada e verificador independente. Cada uma é executada três vezes; a métrica principal é passar nas três.</p>
+            <p><strong>Endurecimento.</strong> Reduzi a superfície de 20/29 para 17/28 ferramentas, desabilitei integrações de acesso amplo e testei a restauração do backup antes de mexer em configuração.</p>
+            <p><strong>Governança.</strong> O Hermes executa, o Codex mede e o Fable/Claude revisa. Nenhuma mudança é considerada boa porque o próprio executor disse que era boa.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>Resultados</h2>
+            <p>Três rodadas de 60 execuções: <strong>60/60 aprovadas</strong>, <strong>pass^3 20/20</strong> e <strong>zero intervenções</strong>. O custo por execução ficou entre US$ 0,0016 e US$ 0,0024, dependendo da rodada e da versão.</p>
+            <p>O eval de alucinação passou <strong>24/24</strong>, com 8/8 tarefas três de três. A fumaça passou <strong>21/21</strong>. O backup restaurou 22.420 mensagens, 268 sessões e 113 skills, com 8/8 hashes conferidos.</p>
+            <p>O agente segue em uso diário para organização, análise e automações. A diferença é que agora existe linha de base, limite, rollback e registro.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>O que eu aprendi</h2>
+            <p>Um agente confiável não é o que responde tudo. É o que sabe quando não sabe, o que deixa rastro, o que falha de forma visível e o que pode ser revertido. A parte menos glamourosa, medição e governança, é o que transforma uma demo em sistema.</p>
+          </section>
+
+          <div class="case-next">
+            <span>Próximo case</span>
+            <a href="wpm-gestao-interna.html">WPM Gestão Interna</a>
+          </div>
+        </div>
+
+        <aside class="case-aside">
+          <h2>Ficha técnica</h2>
+          <ul>
+            <li>Hermes Agent v0.23.1</li>
+            <li>DeepSeek V4.1 Flash</li>
+            <li>Python / SQLite / Linux</li>
+            <li>Telegram, desktop e webapp</li>
+            <li>MCP, plugins e skills</li>
+            <li>Backup com hash e restore</li>
+          </ul>
+
+          <div class="case-stats" aria-label="Números do projeto">
+            <div><strong>20</strong><span>tarefas</span></div>
+            <div><strong>60/60</strong><span>execuções</span></div>
+            <div><strong>24/24</strong><span>eval de alucinação</span></div>
+            <div><strong>0</strong><span>intervenções</span></div>
+          </div>
+
+          <h2 style="margin-top:2rem">Nota</h2>
+          <p class="mono" style="font-size:.66rem;color:var(--muted);line-height:1.6;text-transform:none;letter-spacing:0">Projeto pessoal de implementação e operação sobre um framework open source. Não reivindica autoria do núcleo do Hermes Agent.</p>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Wallace Phillip Maclayne</span>
+      <a href="../index.html#work">Voltar aos projetos</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WPM Gestão Interna — Wallace Phillip Maclayne</title>
+  <meta name="description" content="Case de WPM Gestão Interna: sistema operacional para recepção de academias, com dashboard, NPS, pendências, escala e passagem de turno.">
+  <meta name="theme-color" content="#f2ede3">
+  <meta property="og:title" content="WPM Gestão Interna — Case">
+  <meta property="og:description" content="Um sistema para centralizar a operação da recepção de academias.">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="../index.html" aria-label="Wallace Phillip, início">
+        Wallace Phillip <span>WPM / 2026</span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="primary-nav" aria-expanded="false">Menu</button>
+      <nav class="nav" id="primary-nav" data-nav aria-label="Navegação principal">
+        <a href="../index.html#work" aria-current="page">Projetos</a>
+        <a href="../about.html">Sobre</a>
+        <a href="../index.html#method">Método</a>
+        <a class="nav-contact" href="../contact.html">Contato ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="case-header">
+        <div class="container">
+          <div class="breadcrumb mono">
+            <a href="../index.html#work">← Todos os projetos</a>
+            <span>/</span>
+            <span>Case 02</span>
+          </div>
+          <p class="mono eyebrow">Product / PWA / 2025</p>
+          <h1>WPM Gestão Interna</h1>
+          <div class="case-deck">
+            <p>Um sistema operacional para a recepção de academias, do turno ao indicador.</p>
+            <dl class="case-meta">
+              <div>
+                <dt>Papel</dt>
+                <dd>Produto, design e desenvolvimento</dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>Web app / PWA offline</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>HTML, CSS, JS, Service Worker, Supabase, Vitest, Playwright</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Ativo</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="case-art blue" data-index="02" data-label="OPERATION / SHIFT / SIGNAL" role="img" aria-label="Composição tipográfica abstrata do projeto WPM Gestão Interna"></div>
+      </div>
+
+      <div class="container case-body">
+        <div class="case-content">
+          <section class="case-section">
+            <h2>O problema</h2>
+            <p>A recepção de uma academia lida com dezenas de operações simultâneas: check-in, pagamentos, pendências, NPS, passagem de turno, escala, eventos e backup. Sem um sistema central, cada processo depende de planilha, anotação manual e memória da equipe.</p>
+            <p>O resultado é retrabalho, perda de informação entre turnos e falta de visibilidade para quem chega depois.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>A solução</h2>
+            <p>Desenhei um sistema web que centraliza a operação em uma interface única. Dashboard em tempo real, registro de atendimentos, controle de pendências, medição de NPS, passagem de turno estruturada, escala da equipe, agenda de eventos e backup automático.</p>
+            <p>A aplicação funciona como PWA instalável, com Service Worker e armazenamento local para modo offline, sincronização via Supabase e autenticação com RLS.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>O processo</h2>
+            <p>Observei a operação real e conversei com a equipe. Mapeei os fluxos críticos de abertura e fechamento, passagem de turno, pendências e follow-up de NPS. Prototipei a interface com foco em reduzir cliques por tarefa e desenvolvi em HTML, CSS e JavaScript, com testes automatizados em Vitest e Playwright.</p>
+          </section>
+
+          <section class="case-section">
+            <h2>Resultados</h2>
+            <p>O sistema está em produção como PWA instalável. Centralizou as operações da recepção em uma interface única e substituiu planilhas e anotações manuais nos fluxos cobertos. Continua evoluindo com novos módulos e melhorias baseadas no uso diário.</p>
+            <p><a href="https://wphillipmaclayne.github.io/WPM-GESTAO-INTERNA/" target="_blank" rel="noopener noreferrer" style="border-bottom:1px solid currentColor;padding-bottom:.15rem">Abrir o sistema ↗</a></p>
+          </section>
+
+          <div class="case-next">
+            <span>Próximo case</span>
+            <a href="livro-llm-agentes.html">LLMs e Agentes de Código</a>
+          </div>
+        </div>
+
+        <aside class="case-aside">
+          <h2>Ficha técnica</h2>
+          <ul>
+            <li>PWA offline-first</li>
+            <li>Supabase Auth + PostgreSQL</li>
+            <li>Service Worker / IndexedDB</li>
+            <li>Vitest + Playwright</li>
+            <li>GitHub Pages</li>
+          </ul>
+
+          <div class="case-stats" aria-label="Números do projeto">
+            <div><strong>01</strong><span>interface operacional</span></div>
+            <div><strong>08</strong><span>módulos cobertos</span></div>
+            <div><strong>PWA</strong><span>instalável</span></div>
+            <div><strong>On</strong><span>em produção</span></div>
+          </div>
+
+          <h2 style="margin-top:2rem">Links</h2>
+          <ul>
+            <li><a href="https://wphillipmaclayne.github.io/WPM-GESTAO-INTERNA/" target="_blank" rel="noopener noreferrer">Sistema ao vivo ↗</a></li>
+            <li><a href="https://github.com/WPHILLIPMACLAYNE/WPM-GESTAO-INTERNA" target="_blank" rel="noopener noreferrer">Repositório ↗</a></li>
+          </ul>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Wallace Phillip Maclayne</span>
+      <a href="../index.html#work">Voltar aos projetos</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wphillipmaclayne.github.io/wpm-portfolio-editorial/sitemap.xml
